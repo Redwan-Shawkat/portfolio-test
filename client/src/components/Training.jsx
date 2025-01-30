@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
+import API from "../services/api";
 
 const trainingStyle = {
   backgroundColor: "black",
@@ -14,7 +15,7 @@ const Training = () => {
   useEffect(() => {
     const fetchTrainingData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/training");
+        const response = await API.get("/training");
         setTrainingData(response.data);
       } catch (e) {
         console.error({ message: "Error fetching training data", e });

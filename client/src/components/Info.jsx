@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
+import API from "../services/api";
 import person from "../assets/image/person.png";
 
 const Info = () => {
@@ -9,7 +10,7 @@ const Info = () => {
   useEffect(() => {
     const fetchInfo = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/info");
+        const response = await API.get("/info");
         setInfo(response.data);
       } catch (e) {
         console.error("Error fetching the data", e);

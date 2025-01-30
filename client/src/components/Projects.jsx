@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+import API from "../services/api";
 
 // import portfolio from "../assets/sites/portfolio";
 // import camping from "../assets/sites/Cabin Booking";
@@ -19,7 +20,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/project");
+        const response = await API.get("/project");
         setProjects(response.data);
       } catch (e) {
         console.error({ message: "Error fetching projects", e });

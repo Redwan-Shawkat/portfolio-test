@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
+
+import API from "../services/api";
 
 import expressJs from "../assets/icons/expressJs.svg";
 import mysql from "../assets/icons/mysql.svg";
@@ -26,7 +28,7 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkill = async () => {
       try {
-        const response = await axios.get("https://localhost:5000/api/skill");
+        const response = await API.get("/skill");
         setSkill(response.data);
       } catch (e) {
         console.error({ message: "Error fetching skills", e });

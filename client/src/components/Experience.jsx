@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+
+import API from "../services/api";
 
 const experienceStyles = {
   backgroundColor: "black",
@@ -14,9 +16,7 @@ const Experience = () => {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:5000/api/experience"
-        );
+        const response = await API.get("/experience");
         setExperiences(response.data);
       } catch (e) {
         console.error({ message: "Error fetching experiences", e });

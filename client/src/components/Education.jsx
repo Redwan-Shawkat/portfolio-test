@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
+
+import API from "../services/api";
 
 const educationStyles = {
   width: "100vw",
@@ -24,7 +26,7 @@ const Education = () => {
   useEffect(() => {
     const fetchSchoolData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/school");
+        const response = await API.get("/school");
         setSchoolData(response.data);
       } catch (e) {
         console.error({ message: "Error fetching school data", e });
@@ -36,7 +38,7 @@ const Education = () => {
   useEffect(() => {
     const fetchVarsityData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/varsity");
+        const response = await API.get("varsity");
         setVarsityData(response.data);
       } catch (e) {
         console.error({ message: "Error fetching varsity data", e });
