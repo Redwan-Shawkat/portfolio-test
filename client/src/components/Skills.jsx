@@ -11,7 +11,6 @@ import postman from "../assets/icons/postman.svg";
 
 const skillsStyle = {
   width: "100vw",
-  paddingBottom: "200px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
