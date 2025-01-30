@@ -1,9 +1,12 @@
 import axios from "axios";
 
-export const API = axios.create({
+const API = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
+export default API;
+
+// API requests
 export const fetchInfo = () => API.get("/info");
 export const fetchSkills = () => API.get("/skills");
 export const fetchProjects = () => API.get("/project");
