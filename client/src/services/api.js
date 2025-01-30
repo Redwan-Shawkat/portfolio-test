@@ -9,3 +9,5 @@ export const fetchTraining = () => API.get("/training");
 export const fetchSchool = () => API.get("/school");
 export const fetchVarsity = () => API.get("/varsity");
 export const fetchExperience = () => API.get("/experience");
+
+export default API;
