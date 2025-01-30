@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 // import axios from "axios";
 
-import API from "../services/api";
+import { API } from "../services/api";
 import person from "../assets/image/person.png";
 
 const Info = () => {

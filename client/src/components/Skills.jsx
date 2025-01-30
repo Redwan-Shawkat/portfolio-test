@@ -18,7 +18,6 @@ const skillsStyle = {
   alignItems: "center",
   marginBottom: "5px",
   paddingBottom: "10px",
-  padding: "1rem",
   backgroundColor: "black",
 };
 
